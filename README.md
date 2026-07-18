@@ -42,12 +42,10 @@ Both return: `{ "token", "username", "message" }`
 | PUT    | `/api/todos/{id}`              | Update a todo                    |
 | PATCH  | `/api/todos/{id}/complete`     | Mark todo as completed/read      |
 | DELETE | `/api/todos/{id}`              | Delete a todo                    |
-
 ### Sample flow
 1. Register → get token.
 2. Add `Authorization: Bearer <token>` header on all `/api/todos/**` calls.
 3. Create/update/delete/mark-complete your todos.
-
 ## Notes
 - Passwords are hashed with BCrypt before storing.
 - JWT secret + expiry are in `application.properties` (`jwt.secret`, `jwt.expiration.ms`) — change the secret before deploying anywhere real.
